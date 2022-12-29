@@ -73,6 +73,5 @@ const InitGame = (e) => {
 
 btn.addEventListener("click", randomWordsGenerator);
 typeInput.addEventListener("input", InitGame)
-document.addEventListener("keydown", () => {
-    typeInput.focus();
-});
+inputs.addEventListener("click",()=>typeInput.focus());
+document.addEventListener("keydown", () => typeInput.focus());

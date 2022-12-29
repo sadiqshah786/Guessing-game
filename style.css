@@ -8,6 +8,7 @@ body {
 .game-wrapper {
     margin: 80px auto;
 }
+
 .game-wrapper>h1 {
     font-family: 'Chakra Petch', sans-serif;
     color: #fff;
@@ -33,26 +34,33 @@ body {
     border-radius: 10px;
     text-transform: uppercase;
 }
+
 .swal-title {
     font-family: 'Chakra Petch';
     font-weight: bold;
     font-size: 38px;
 }
+
 .game-info {
     margin: 40px auto;
     text-align: center;
 }
+
 .game-info p {
     font-family: 'IBM Plex Mono', monospace;
     color: #B9B9BF;
     font-size: 18px;
 }
-.button,.main-input{
+
+.button,
+.main-input {
     text-align: center;
 }
-.swal-button{
+
+.swal-button {
     background: #14C2A3;
 }
+
 .button button {
     width: 400px;
     padding: 15px;
@@ -64,12 +72,41 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     cursor: pointer;
 }
-.main-input input{
+
+.main-input input {
     opacity: 0;
+    z-index: -999;
+    pointer-events: none;
+    position: absolute;
 }
+
 @media screen and (max-width:600px) {
+    .game-wrapper{
+        margin-top: 80px;
+    }
     .game-wrapper input[type="text"] {
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    
+
+    .game-wrapper>h1 {
+        font-size: 32px;
+    }
+
+    .game-info {
+        text-align: center;
+    }
+    .game-info p {
+        font-size: 14px;
+    }
+    .input-wrapper input[type="text"]{
+        margin: 0px 5px;
+    }
+    .button button {
+        width: 80%;
+        font-size: 14px;
     }
 }
