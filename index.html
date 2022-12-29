@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-wrapper">
+        <h1>Guess Word</h1>
+        <div class="main-input">
+            <input type="text" class="inputValue" maxlength="1" >
+        </div>
+        <div class="input-wrapper">
+        </div>
+        <div class="game-info">
+            <p class="hint">Hint: <span>Language</span></p>
+            <p class="guess">Remaining Guess: <span>05</span></p>
+            <p class="wrong">Wrong Letter: <span>Wrong Guesses Will show</span></p>
+
+        </div>
+
+        <div class="button">
+            <button class="btn">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="word.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

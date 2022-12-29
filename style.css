@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+body {
+    background-image: url(./assests/img/bg-1.jpg);
+}
+
+.game-wrapper {
+    margin: 80px auto;
+}
+.game-wrapper>h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.game-wrapper .input-wrapper {
+    text-align: center;
+}
+
+.input-wrapper input[type="text"] {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    text-align: center;
+    background: #14C2A3;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Chakra Petch';
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.swal-title {
+    font-family: 'Chakra Petch';
+    font-weight: bold;
+    font-size: 38px;
+}
+.game-info {
+    margin: 40px auto;
+    text-align: center;
+}
+.game-info p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #B9B9BF;
+    font-size: 18px;
+}
+.button,.main-input{
+    text-align: center;
+}
+.swal-button{
+    background: #14C2A3;
+}
+.button button {
+    width: 400px;
+    padding: 15px;
+    background: #14C2A3;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Chakra Petch', sans-serif;
+    cursor: pointer;
+}
+.main-input input{
+    opacity: 0;
+}
+@media screen and (max-width:600px) {
+    .game-wrapper input[type="text"] {
+        width: 50px;
+        height: 50px;
+    }
+}
