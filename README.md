@@ -1,2 +1,2 @@
 # Guessing-game
-Demo : <a href="guessing-game-786.netlify.app">Guessing-game</a>
+ <a href="guessing-game-786.netlify.app" target="_blank">Guessing-game</a>
