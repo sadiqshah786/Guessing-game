@@ -10,24 +10,26 @@ let WordCount, noOfGuess, inCorrects = [], corrects = [];
 const randomWordsGenerator = () => {
     let randomWord = wordList[Math.floor(Math.random() * wordList.length)];
     WordCount = randomWord.word;
-    noOfGuess = 5;
+    noOfGuess = WordCount.length >= 5 ? 8 : 5;
+    inCorrects = [];
+    corrects = [];
+    hint.innerHTML = randomWord.hint;
+    guess.innerHTML = `0${noOfGuess}`
+    wrong.innerHTML = inCorrects;
     let HoldValues = '';
     for (i = 0; i < WordCount.length; i++) {
         HoldValues += `<input type="text" disabled>`
     }
     inputs.innerHTML = HoldValues;
 
-    hint.innerHTML = randomWord.hint;
-    guess.innerHTML = `0${noOfGuess}`
-    wrong.innerHTML = 'Wrong Guesses Will show';
-    inCorrects.length = 0;
+
 }
 randomWordsGenerator();
 
 let OnlyAlphabtes = /^[A-Za-z]+$/;
 const InitGame = (e) => {
     let eventInput = e.target.value;
-    if (eventInput.match(OnlyAlphabtes) && !inCorrects.includes(`${eventInput}`)) {
+    if (eventInput.match(OnlyAlphabtes) && !inCorrects.includes(`${eventInput}`) && !corrects.includes(eventInput)) {
         if (WordCount.includes(eventInput)) {
             for (i = 0; i < WordCount.length; i++) {
                 if (WordCount[i] === eventInput) {
@@ -53,7 +55,7 @@ const InitGame = (e) => {
             icon: "success",
             button: "Play Again",
         });
-                
+
 
     }
     else if (noOfGuess < 1) {
@@ -65,7 +67,6 @@ const InitGame = (e) => {
         });
         for (i = 0; i < WordCount.length; i++) {
             inputs.querySelectorAll('input')[i].value = WordCount[i];
-            wrong.innerHTML = 'Wrong Guesses Will show';
         }
 
     }
@@ -73,5 +74,5 @@ const InitGame = (e) => {
 
 btn.addEventListener("click", randomWordsGenerator);
 typeInput.addEventListener("input", InitGame)
-inputs.addEventListener("click",()=>typeInput.focus());
+inputs.addEventListener("click", () => typeInput.focus());
 document.addEventListener("keydown", () => typeInput.focus());
